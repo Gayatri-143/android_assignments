@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hub_title"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_dark"
+        android:layout_marginBottom="32dp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rating_label"
+                android:textSize="18sp"
+                android:textColor="@color/primary"
+                android:layout_marginBottom="12dp"/>
+            <RatingBar
+                android:id="@+id/rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:rating="3.5"
+                android:progressTint="@color/accent"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/progress_label"
+                android:textSize="18sp"
+                android:textColor="@color/primary"
+                android:layout_marginBottom="12dp"/>
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progress="60"
+                android:progressTint="@color/primary"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/update_btn"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="@string/submit_btn"
+        app:cornerRadius="12dp"
+        android:backgroundTint="@color/primary_dark"/>
+
+</LinearLayout>
